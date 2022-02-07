@@ -2,6 +2,8 @@
 
 pragma solidity ^0.8.11;
 
+import "hardhat/console.sol";
+
 contract Token {
     string public name = "Gourav Token";
     string public symbol = "GVT";
@@ -15,7 +17,7 @@ contract Token {
     }
 
     function transfer(address to, uint256 amount) external {
-        require(balances[msg.sender] > amount, "Not enough Tokens.");
+        require(balances[msg.sender] >= amount, "Not enough Tokens.");
         balances[msg.sender] -= amount;
         balances[to] += amount;
     }
