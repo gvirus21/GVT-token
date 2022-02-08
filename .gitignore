@@ -8,6 +8,8 @@ myproject
 # VS Code workspace config
 workspace.code-workspace
 
+.env
+
 .DS_Store
 
 # Below is Github's node gitignore template,
